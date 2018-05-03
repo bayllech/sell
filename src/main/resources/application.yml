@@ -1,0 +1,15 @@
+
+#公共配置与profiles选择无关
+mybatis:
+  typeAliasesPackage: com.bayllech.sell.pojo
+  mapperLocations: classpath:/com/bayllech/sell/repository/mapper/*.xml
+#  configLocation: classpath:/mybatis-config.xml
+
+
+#开发配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://usa:3306/sell?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: rootroot
