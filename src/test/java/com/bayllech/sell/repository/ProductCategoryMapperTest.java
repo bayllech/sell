@@ -18,13 +18,31 @@ public class ProductCategoryMapperTest {
     @Test
     public void insert() {
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategory_name("最受欢迎");
-        productCategory.setCategory_type(1);
+        productCategory.setCategoryName("最受欢迎");
+        productCategory.setCategoryType(1);
         Integer result = productCategoryMapper.insert(productCategory);
         Assert.assertNotNull(result);
     }
 
     @Test
     public void selectByPrimaryKey() {
+        ProductCategory productCategory = productCategoryMapper.selectByPrimaryKey(1);
+        Assert.assertNotNull(productCategory);
+    }
+
+    @Test
+    public void deleteByPrimaryKey() {
+        Integer result = productCategoryMapper.deleteByPrimaryKey(3);
+        Assert.assertEquals((long)result, 1L);
+    }
+
+    @Test
+    public void update() {
+        ProductCategory productCategory = productCategoryMapper.selectByPrimaryKey(4);
+//        ProductCategory productCategory = new ProductCategory();
+        productCategory.setCategoryId(4);
+        productCategory.setCategoryName("最受欢迎的");
+        long result = productCategoryMapper.updateByPrimaryKeySelective(productCategory);
+        Assert.assertEquals(result,1);
     }
 }

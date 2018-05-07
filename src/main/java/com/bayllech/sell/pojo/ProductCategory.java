@@ -1,10 +1,5 @@
 package com.bayllech.sell.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,34 +7,71 @@ import java.util.Date;
  * product_category
  * @author 
  */
-@Data
-@NoArgsConstructor
 public class ProductCategory implements Serializable {
     /**
      * 类目id
      */
-    private Integer category_id;
+    private Integer categoryId;
 
     /**
      * 名称
      */
-    private String category_name;
+    private String categoryName;
 
     /**
      * 编号
      */
-    private Integer category_type;
+    private Integer categoryType;
 
     /**
      * 创建时间
      */
-    private Date create_time;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date update_time;
+    private Date updateTime;
 
     private static final long serialVersionUID = 1L;
 
+    public Integer getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public Integer getCategoryType() {
+        return categoryType;
+    }
+
+    public void setCategoryType(Integer categoryType) {
+        this.categoryType = categoryType;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 }
