@@ -13,5 +13,6 @@ public class SellApplicationTests {
 	public void contextLoads() {
 	}
 //sourceTree 界面 2 
-//git clone https:
+//git clone https: 每次命令提交需输入密码
+//git clone https make sourceTree push
 }
